@@ -10,7 +10,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 
 WORKDIR /var/www/html
 
-RUN wget https://raw.githubusercontent.com/concrete-renan-bastos/docker-jenkins-learning/working/index.html
+RUN rm -rf index.html && wget https://raw.githubusercontent.com/concrete-renan-bastos/docker-jenkins-learning/working/index.html
 
 EXPOSE 80
 
