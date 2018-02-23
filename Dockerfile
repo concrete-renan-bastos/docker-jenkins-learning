@@ -10,8 +10,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 
 WORKDIR /var/www/html
 
-RUN rm -rf index.html && wget https://raw.githubusercontent.com/concrete-renan-bastos/docker-jenkins-learning/working/index.html
-
+RUN rm -f index.html && wget https://raw.githubusercontent.com/concrete-renan-bastos/docker-jenkins-learning/master/index.html
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
